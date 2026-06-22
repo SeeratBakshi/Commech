@@ -28,15 +28,9 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(
-    135deg,
-    #09090b 20%,
-    #27272a 40%,
-    #e11d48 60%,
-    #be185d 75%,
-    #7e22ce 90%,
-    #4f46e5 100%
-  );
+  background-image: 
+    linear-gradient(to bottom, #09090b 25%, transparent 68%),
+    linear-gradient(108deg, #3b82f6 8%, #6366f1 22%, #ff7a60 48%, #db2777 68%, #8b5cf6 85%, #09090b 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
