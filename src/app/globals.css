@@ -5,7 +5,7 @@
 }
 
 :root {
-  --background: #f8fafc;
+  --background: #fafafa;
   --foreground: #0f172a;
 }
 
@@ -20,21 +20,22 @@ body {
 /* Premium micro-interactions and styling */
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.04), 0 1px 1px 0 rgba(255, 255, 255, 0.8) inset;
 }
 
 .text-gradient {
   background: linear-gradient(
     135deg,
-    #0f172a 10%,
-    #1e1b4b 35%,
-    #311042 60%,
-    #581c87 80%,
-    #701a75 95%
+    #09090b 20%,
+    #27272a 40%,
+    #e11d48 60%,
+    #be185d 75%,
+    #7e22ce 90%,
+    #4f46e5 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -43,10 +44,13 @@ body {
 }
 
 .orange-gradient-btn {
-  background: linear-gradient(135deg, #f97316 0%, #ea580c 40%, #dc2626 100%);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 45%, #dc2626 100%);
   position: relative;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px 0 rgba(249, 115, 22, 0.35);
+  box-shadow: 
+    0 4px 12px 0 rgba(249, 115, 22, 0.3),
+    0 12px 28px -4px rgba(249, 115, 22, 0.35),
+    0 8px 16px -6px rgba(220, 38, 38, 0.2);
 }
 
 .orange-gradient-btn::before {
@@ -61,8 +65,11 @@ body {
 }
 
 .orange-gradient-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px 0 rgba(249, 115, 22, 0.5);
+  transform: translateY(-1.5px);
+  box-shadow: 
+    0 6px 14px 0 rgba(249, 115, 22, 0.4),
+    0 16px 36px -4px rgba(249, 115, 22, 0.5),
+    0 10px 20px -6px rgba(220, 38, 38, 0.3);
 }
 
 .orange-gradient-btn:hover::before {
@@ -70,31 +77,34 @@ body {
 }
 
 .orange-gradient-btn:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 8px 0 rgba(249, 115, 22, 0.3);
+  transform: translateY(0.5px);
+  box-shadow: 
+    0 2px 8px 0 rgba(249, 115, 22, 0.3),
+    0 8px 20px -4px rgba(249, 115, 22, 0.4);
 }
 
 /* Glassmorphic backdrop glow under buttons */
 .button-glow-wrapper {
   position: relative;
+  overflow: visible;
 }
 
 .button-glow-wrapper::after {
   content: '';
   position: absolute;
-  bottom: -6px;
-  left: 10%;
-  right: 10%;
-  height: 12px;
-  background: radial-gradient(circle, rgba(249, 115, 22, 0.45) 0%, rgba(220, 38, 38, 0) 70%);
-  filter: blur(8px);
-  z-index: 0;
+  bottom: -4px;
+  left: 8%;
+  right: 8%;
+  height: 10px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.6) 0%, rgba(220, 38, 38, 0) 75%);
+  filter: blur(6px);
+  z-index: -1;
   pointer-events: none;
-  opacity: 0.75;
-  transition: opacity 0.3s ease;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
 .button-glow-wrapper:hover::after {
   opacity: 1;
-  filter: blur(10px);
+  filter: blur(8px);
 }

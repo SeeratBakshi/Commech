@@ -31,14 +31,14 @@ export default function HeroSection() {
       <div className="h-6 sm:h-8" />
 
       {/* Call to Action Container */}
-      <div className="w-full max-w-xl mx-auto animate-fade-in-up-delayed px-1 sm:px-0">
+      <div className="w-full max-w-2xl mx-auto animate-fade-in-up-delayed px-1 sm:px-0">
         <form
           onSubmit={handleSubmit}
-          className="glass-card rounded-full p-1.5 pl-4 sm:pl-5 flex items-center shadow-lg relative group transition-all duration-300 hover:shadow-xl hover:border-slate-200"
+          className="glass-card rounded-full p-2 pl-6 sm:pl-7 flex items-center shadow-lg relative group transition-all duration-300 hover:shadow-xl hover:border-slate-200"
         >
           {/* Magnifying Glass Icon */}
           <svg
-            className="w-5 h-5 text-slate-400 mr-3 flex-shrink-0 transition-colors group-focus-within:text-slate-600"
+            className="w-6 h-6 text-slate-400 mr-3 flex-shrink-0 transition-colors group-focus-within:text-slate-600"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -58,14 +58,14 @@ export default function HeroSection() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
             required
-            className="w-full bg-transparent border-none text-[15px] sm:text-[16px] text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-0 pr-2 min-w-0"
+            className="w-full bg-transparent border-none text-[17px] sm:text-[18px] text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-0 pr-2 min-w-0"
           />
 
           {/* Glowing CTA Button */}
           <div className="button-glow-wrapper flex-shrink-0">
             <button
               type="submit"
-              className="inline-flex items-center justify-center px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-[14px] sm:text-[15px] font-bold text-white orange-gradient-btn focus:outline-none z-10 cursor-pointer whitespace-nowrap"
+              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-[15px] sm:text-[16px] font-bold text-white orange-gradient-btn focus:outline-none z-10 cursor-pointer whitespace-nowrap"
             >
               {isSubmitted ? "Thank you!" : "Request Demo"}
             </button>

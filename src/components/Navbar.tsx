@@ -11,6 +11,8 @@ export default function Navbar() {
     { name: "Features", href: "#" },
     { name: "About", href: "#" },
     { name: "Blog", href: "#" },
+    { name: "Login", href: "#" },
+    { name: "Signup", href: "#" },
   ];
 
   return (
@@ -20,67 +22,48 @@ export default function Navbar() {
           
           {/* Logo on the Left */}
           <div className="flex-shrink-0 flex items-center gap-3">
-            <a href="#" className="flex items-center gap-2 group focus:outline-none">
+            <a href="#" className="flex items-center gap-2.5 group focus:outline-none">
               <div className="w-9 h-9 relative flex items-center justify-center transition-transform duration-300 group-hover:rotate-12">
-                {/* SVG Replica of the mockup logo */}
+                {/* SVG Replica of the mockup logo - abstract P/swoosh mark with cutout */}
                 <svg
-                  viewBox="0 0 100 100"
+                  viewBox="0 0 32 32"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-full h-full text-slate-900"
+                  className="w-full h-full text-slate-950"
                 >
-                  <circle cx="50" cy="50" r="48" fill="currentColor" />
-                  {/* Dynamic internal spiral/leaf shapes for design fidelity */}
                   <path
-                    d="M50 16C31.22 16 16 31.22 16 50C16 68.78 31.22 84 50 84C68.78 84 84 68.78 84 50C84 41.5 80.5 33.8 74.8 28.2L66.3 36.7C69.8 40.2 72 44.8 72 50C72 62.1 62.1 72 50 72C37.9 72 28 62.1 28 50C28 37.9 37.9 28 50 28C55.2 28 59.8 30.2 63.3 33.7L71.8 25.2C66.2 19.5 58.5 16 50 16Z"
-                    fill="white"
-                  />
-                  <circle cx="50" cy="50" r="14" fill="white" />
-                  <path
-                    d="M50 43C46.1 43 43 46.1 43 50C43 53.9 46.1 57 50 57C53.9 57 57 53.9 57 50L50 43Z"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M16 0C7.164 0 0 7.164 0 16C0 24.836 7.164 32 16 32C24.836 32 32 24.836 32 16C32 7.164 24.836 0 16 0ZM18 8H12V24H16V17H18C21.866 17 25 13.866 25 10C25 6.134 21.866 8 18 8ZM16 13V11H18C18.552 11 19 11.448 19 12C19 12.552 18.552 13 18 13H16Z"
                     fill="currentColor"
                   />
                 </svg>
               </div>
-              <span className="text-xl font-bold tracking-tight text-slate-900 font-sans group-hover:text-slate-700 transition-colors">
+              <span className="text-xl font-medium tracking-tight text-slate-950 font-sans">
                 commrmech
               </span>
             </a>
           </div>
 
-          {/* Middle Nav Links (Desktop) */}
-          <nav className="hidden md:flex space-x-8 lg:space-x-10 items-center">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-[15px] font-medium text-slate-600 hover:text-slate-950 transition-colors duration-200"
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
-
-          {/* Right Action Items (Desktop) */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <a
-              href="#"
-              className="text-[15px] font-medium text-slate-600 hover:text-slate-950 transition-colors duration-200"
-            >
-              Login
-            </a>
-            <a
-              href="#"
-              className="text-[15px] font-medium text-slate-600 hover:text-slate-950 transition-colors duration-200"
-            >
-              Signup
-            </a>
+          {/* Nav Links + CTA (Desktop) */}
+          <div className="hidden md:flex items-center space-x-8 lg:space-x-10">
+            <nav className="flex space-x-6 lg:space-x-8 items-center">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-[14px] font-normal text-gray-500 hover:text-gray-900 transition-colors duration-200"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </nav>
             
             {/* CTA Button Wrapper to allow bottom glow */}
             <div className="button-glow-wrapper">
               <a
                 href="#"
-                className="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-[14px] font-semibold text-white orange-gradient-btn z-10"
+                className="inline-flex items-center justify-center px-5.5 py-2.5 rounded-lg border border-orange-500/30 text-[14px] font-bold text-white orange-gradient-btn z-10"
               >
                 Request Demo
               </a>
@@ -137,7 +120,7 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="block px-3 py-2.5 rounded-lg text-[16px] font-medium text-slate-700 hover:text-slate-950 hover:bg-slate-50 transition-colors"
+              className="block px-3 py-2.5 rounded-lg text-[16px] font-normal text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
@@ -161,7 +144,7 @@ export default function Navbar() {
             </a>
             <a
               href="#"
-              className="w-full inline-flex items-center justify-center px-4 py-3 rounded-full text-[15px] font-semibold text-white orange-gradient-btn"
+              className="w-full inline-flex items-center justify-center px-4 py-3 rounded-lg border border-orange-500/30 text-[15px] font-semibold text-white orange-gradient-btn"
               onClick={() => setIsOpen(false)}
             >
               Request Demo
