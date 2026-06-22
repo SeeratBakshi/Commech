@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-outfit), system-ui, -apple-system, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #f8fafc;
+  --foreground: #0f172a;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Premium micro-interactions and styling */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.04), 0 1px 1px 0 rgba(255, 255, 255, 0.8) inset;
+}
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    #0f172a 10%,
+    #1e1b4b 35%,
+    #311042 60%,
+    #581c87 80%,
+    #701a75 95%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.orange-gradient-btn {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 40%, #dc2626 100%);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px 0 rgba(249, 115, 22, 0.35);
+}
+
+.orange-gradient-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #ea580c 0%, #dc2626 50%, #b91c1c 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.orange-gradient-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px 0 rgba(249, 115, 22, 0.5);
+}
+
+.orange-gradient-btn:hover::before {
+  opacity: 1;
+}
+
+.orange-gradient-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px 0 rgba(249, 115, 22, 0.3);
+}
+
+/* Glassmorphic backdrop glow under buttons */
+.button-glow-wrapper {
+  position: relative;
+}
+
+.button-glow-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 10%;
+  right: 10%;
+  height: 12px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.45) 0%, rgba(220, 38, 38, 0) 70%);
+  filter: blur(8px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+}
+
+.button-glow-wrapper:hover::after {
+  opacity: 1;
+  filter: blur(10px);
 }
