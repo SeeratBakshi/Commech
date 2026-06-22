@@ -27,30 +27,16 @@ body {
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.04), 0 1px 1px 0 rgba(255, 255, 255, 0.8) inset;
 }
 
-.text-gradient-building {
-  background-image: 
-    linear-gradient(to bottom, #000000 45%, transparent 78%),
-    linear-gradient(to right, #3b629b 5%, #d88f7c 50%, #8e5e77 95%) !important;
-  background-clip: text !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: transparent !important;
-}
-
-.text-gradient-future {
-  background-image: 
-    linear-gradient(to bottom, #000000 45%, transparent 78%),
-    linear-gradient(to right, #3b629b 15%, #000000 85%) !important;
-  background-clip: text !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: transparent !important;
-}
-
-.text-gradient-tech {
-  background-image: 
-    linear-gradient(to bottom, #000000 45%, transparent 78%),
-    linear-gradient(to right, #000000 15%, #d88f7c 55%, #8e5e77 95%) !important;
+.text-gradient {
+  background-image: linear-gradient(
+    165deg,
+    #000000 0%,
+    #000000 50%,
+    #3b629b 68%,
+    #d88f7c 80%,
+    #8e5e77 92%,
+    #000000 100%
+  ) !important;
   background-clip: text !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
