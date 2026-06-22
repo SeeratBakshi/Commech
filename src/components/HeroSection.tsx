@@ -18,12 +18,15 @@ export default function HeroSection() {
   return (
     <section className="flex flex-col items-center justify-center flex-1 px-6 sm:px-8 text-center pt-24 pb-36 md:pt-32 md:pb-48 relative z-10 max-w-5xl mx-auto">
       
-      {/* Animated Headline Container */}
       <div className="animate-fade-in-up">
-        <h1 className="text-[48px] sm:text-7xl md:text-8xl lg:text-[96px] font-semibold tracking-[-0.03em] leading-[1.05] select-none text-gradient pb-4">
-          Building the
+        <h1 className="text-[48px] sm:text-7xl md:text-8xl lg:text-[96px] xl:text-[104px] font-semibold tracking-[-0.035em] leading-[1.04] select-none pb-4">
+          <span className="text-gradient-building">Building</span>{" "}
+          <span className="text-black">the</span>
           <br className="hidden sm:inline" />
-          {" "}Future of Tech
+          {" "}
+          <span className="text-gradient-future">Future</span>{" "}
+          <span className="text-black">of</span>{" "}
+          <span className="text-gradient-tech">Tech</span>
         </h1>
       </div>
 
