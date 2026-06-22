@@ -29,12 +29,12 @@ body {
 
 .text-gradient {
   background-image: 
-    linear-gradient(to bottom, #09090b 25%, transparent 68%),
-    linear-gradient(108deg, #3b82f6 8%, #6366f1 22%, #ff7a60 48%, #db2777 68%, #8b5cf6 85%, #09090b 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+    linear-gradient(to bottom, #09090b 20%, transparent 62%),
+    linear-gradient(142deg, #3b82f6 5%, #6366f1 18%, #ff7a60 38%, #db2777 54%, #8b5cf6 68%, #09090b 80%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
 }
 
 .orange-gradient-btn {

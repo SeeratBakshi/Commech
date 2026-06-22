@@ -20,7 +20,7 @@ export default function HeroSection() {
       
       {/* Animated Headline Container */}
       <div className="animate-fade-in-up">
-        <h1 className="text-[42px] sm:text-5xl md:text-6xl lg:text-[72px] font-semibold tracking-[-0.03em] leading-[1.08] select-none text-gradient pb-4">
+        <h1 className="text-[44px] sm:text-6xl md:text-7xl lg:text-[84px] font-semibold tracking-[-0.03em] leading-[1.08] select-none text-gradient pb-4">
           Building the
           <br className="hidden sm:inline" />
           {" "}Future of Tech
