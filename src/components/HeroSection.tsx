@@ -19,7 +19,7 @@ export default function HeroSection() {
   );
 
   return (
-    <section className="flex flex-col items-center justify-center flex-1 px-4 sm:px-6 md:px-8 text-center pt-24 sm:pt-28 md:pt-[145px] pb-10 sm:pb-16 relative z-10 max-w-5xl mx-auto w-full">
+    <section className="flex flex-col items-center justify-start sm:justify-center flex-1 px-4 sm:px-6 md:px-8 text-center pt-20 sm:pt-28 md:pt-[145px] pb-10 sm:pb-16 relative z-10 max-w-5xl mx-auto w-full">
       <div className="animate-fade-in-up">
         <h1 className="text-[42px] sm:text-[48px] md:text-7xl lg:text-8xl xl:text-[110px] font-semibold tracking-[-0.035em] leading-[1.08] sm:leading-[1.04] select-none pb-2 sm:pb-4 text-center">
           <span className="text-gradient-building">Building</span>{" "}
