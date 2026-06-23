@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Building the Future of Tech",
-  description: "A premium, responsive hero section replicated with next.js, Tailwind CSS, and custom SVG grid wave mesh.",
-  metadataBase: new URL("https://test-task-hero.vercel.app"),
+  title: "CommMech — Building the Future of Tech",
+  description:
+    "CommMech delivers cutting-edge technology solutions. Request a demo to see how we build the future of tech.",
+  metadataBase: new URL("https://commmech.com"),
   openGraph: {
-    title: "Building the Future of Tech",
-    description: "A premium, responsive hero section replicated with next.js, Tailwind CSS, and custom SVG grid wave mesh.",
+    title: "CommMech — Building the Future of Tech",
+    description:
+      "CommMech delivers cutting-edge technology solutions. Request a demo to see how we build the future of tech.",
     type: "website",
   },
 };
@@ -24,13 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${outfit.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col font-sans">
-        {children}
-      </body>
+    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>
   );
 }
